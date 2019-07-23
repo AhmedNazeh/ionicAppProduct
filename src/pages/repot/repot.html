@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+        <ion-title text-right>
+            <img src="assets/logo.png" style="height: 42px;" alt="">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <form (ngSubmit)="login()">
+
+
+        <ion-label stacked text-center>
+            {{"ProductImage" | translate}}
+        </ion-label>
+        <ion-item>
+
+            <label ion-button for="uploadResume2" block style="background-color: #16a085;color: white;" color="secondary">{{"Upload" | translate}}</label>
+            <input style="display: none;" type="file" name="" id="uploadResume2" (change)="OnResumeSelect2($event)">
+
+        </ion-item>
+
+
+
+        <ion-item text-center>
+            <ion-label stacked>
+                {{"Reason" | translate}}
+            </ion-label>
+            <ion-textarea text-center [(ngModel)]="userData.reason" name="reason"></ion-textarea>
+        </ion-item>
+
+        <ion-item text-center>
+            <ion-label stacked>
+                {{"StoreName" | translate}}
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="userData.shopname" name="shopname" text-center></ion-input>
+        </ion-item>
+
+
+        <ion-item text-center>
+            <ion-label stacked>{{"Street" | translate}}</ion-label>
+            <ion-input type="text" text-center [(ngModel)]="userData.street" name="street"></ion-input>
+        </ion-item>
+
+        <ion-item text-center>
+            <ion-label stacked>{{"Neighborhood" | translate}}</ion-label>
+            <ion-input type="email" text-center [(ngModel)]="userData.neighborhood" name="neighborhood"></ion-input>
+        </ion-item>
+
+
+
+
+        <ion-label stacked text-center>
+            {{"PurchaseInvoice" | translate}}
+        </ion-label>
+        <ion-item>
+
+            <label ion-button for="uploadResume" block style="background-color: #16a085;color: white;" color="secondary">{{"Upload" | translate}}</label>
+            <input style="display: none;" type="file" name="" id="uploadResume" (change)="OnResumeSelect1($event)">
+
+        </ion-item>
+
+
+        <button ion-button round full style="height:36px;" type="submit" block>{{"Report" | translate}}</button>
+    </form>
+
+</ion-content>

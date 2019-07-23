@@ -1,0 +1,70 @@
+<ion-menu [content]="content">
+
+
+    <ion-content class="my-container">
+        <ion-list>
+            <ion-item menuClose>
+                <ion-avatar item-end>
+                    <img src="assets/user.png">
+                </ion-avatar>
+
+                <h2 text-right style="font-weight: bold !important;">
+
+                    {{"welcomeMsg" | translate}}
+                </h2>
+                <h2 text-right>
+                    {{name}}
+
+                </h2>
+
+
+            </ion-item>
+
+            <ion-item menuClose text-center (click)="GoHome()">
+                <ion-icon name="md-home" item-end></ion-icon>
+                {{"Home" | translate }}
+            </ion-item>
+
+
+            <ion-item menuClose *ngFor="let x of data" text-center (click)="GoPage(x)">
+                <ion-icon name="information-circle" item-end></ion-icon>
+                <p style="color: white;font-size: 1.7rem;" *ngIf="lang== 'ar'">{{x.name}}</p>
+                <p style="color: white;font-size: 1.7rem;" *ngIf="lang== 'en'">{{x.en_name}}</p>
+            </ion-item>
+            <ion-item tappable text-center menuClose no-line (click)="shareApp()">
+                <ion-icon name="md-share" item-right></ion-icon>
+                {{"ShareApp" | translate }}
+            </ion-item>
+            <ion-item tappable text-center menuClose no-line (click)="rateApp()">
+                <ion-icon name="md-thumbs-up" item-right></ion-icon>
+                {{"RateApp" | translate }}
+            </ion-item>
+
+
+            <ion-item menuClose text-center (click)="GoRepot()">
+                <ion-icon name="mail" item-end></ion-icon>
+                {{"ReportProduct" | translate}}
+            </ion-item>
+            <ion-item menuClose text-center (click)="Gocontact()">
+                <ion-icon name="mail" item-end></ion-icon>
+                {{"CallUs" | translate}}
+            </ion-item>
+
+            <ion-item menuClose text-center (click)="logout()">
+                <ion-icon name="log-out" item-end></ion-icon>
+                {{"LogOut" | translate}}
+            </ion-item>
+
+            <ion-item menuClose text-center (click)="changeLang()">
+                <ion-icon name="construct" item-end></ion-icon>
+                {{txtLang}}
+            </ion-item>
+
+
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

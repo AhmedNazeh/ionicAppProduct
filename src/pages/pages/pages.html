@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title text-right>
+            <img src="assets/logo.png" style="height: 42px;" alt="">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding text-right *ngIf="one">
+    <h3 text-right *ngIf="lang== 'ar'">
+        {{one.name}}
+    </h3>
+    <h3 text-left *ngIf="lang== 'en'">
+        {{one.en_name}}
+    </h3>
+    <p style="text-align: justify !important;text-justify: inter-word;direction: rtl;" *ngIf="lang== 'ar'">
+
+        {{one.body}}
+    </p>
+    <p style="text-align: justify !important;text-justify: inter-word;direction: ltr;" *ngIf="lang== 'en'">
+
+        {{one.en_body}}
+    </p>
+
+    <button *ngIf="one.id == 3 && !isLogin" ion-button block (click)="ok()" style="background-color: ##FC4800">{{"ok" | translate}}</button>
+</ion-content>

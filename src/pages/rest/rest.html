@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title text-right>
+            <img src="assets/logo.png" style="height: 42px;" alt="">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="login()">
+        <ion-list dir="rtl">
+
+            <ion-item text-right>
+                <ion-label stacked>{{"Phone" | translate}}</ion-label>
+                <ion-input type="tel" text-right [(ngModel)]="userData.phone" name="phone" style="text-align: right;"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <button ion-button round full style="height: 36px;" type="submit">
+       {{"SendCode" | translate}}
+      </button>
+
+
+            </ion-item>
+        </ion-list>
+    </form>
+</ion-content>

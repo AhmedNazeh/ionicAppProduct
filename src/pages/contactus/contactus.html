@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title text-right>
+            <img src="assets/logo.png" style="height: 42px;" alt="">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <form (ngSubmit)="login()">
+
+        <ion-item text-right>
+            <ion-label stacked>{{"Name" | translate}}</ion-label>
+            <ion-input type="text" [(ngModel)]="userData.name" name="name" text-right></ion-input>
+        </ion-item>
+
+        <ion-item text-right>
+            <ion-label stacked>{{"EMail" | translate}}</ion-label>
+            <ion-input type="email" text-right [(ngModel)]="userData.email" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item text-right>
+            <ion-label stacked>{{"Phone" | translate}}</ion-label>
+            <ion-input type="text" text-right [(ngModel)]="userData.phone" name="phone"></ion-input>
+        </ion-item>
+
+        <ion-item text-right>
+            <ion-label stacked>{{"Subject" | translate}}</ion-label>
+            <ion-input type="text" text-right [(ngModel)]="userData.subject" name="subject"></ion-input>
+        </ion-item>
+
+
+        <ion-item text-right>
+            <ion-label stacked>{{"Message" | translate}}</ion-label>
+            <ion-textarea text-right [(ngModel)]="userData.message" name="message"></ion-textarea>
+        </ion-item>
+
+
+        <button ion-button round full style="height:36px;" type="submit" block>{{"Send" | translate}}</button>
+    </form>
+
+</ion-content>

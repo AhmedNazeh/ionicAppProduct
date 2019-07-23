@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title text-right>
+            <img src="assets/logo.png" style="height: 42px;" alt="">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!-- <ion-list>
+        
+        <ion-item *ngFor="let x of data">
+           
+            <h2 text-right>title</h2>
+            <p>{{x.created_at}}</p>
+            <ion-thumbnail item-end>
+                <img src="{{upurl}}{{x.image}}">
+              </ion-thumbnail>
+        </ion-item>
+        
+      </ion-list> -->
+    <ion-card *ngFor="let x of data">
+        <ion-card-header>
+            <ion-row justify-content-between>
+                <ion-col col-auto>
+                    <img src="{{upurl}}{{x.image}}" style="height: 180px;" item-left/>
+                </ion-col>
+                <ion-col>
+                    <ion-row text-wrap style="direction: rtl;color: white;">
+                        <ion-label>{{"ProductName" | translate}}</ion-label>
+                        <ion-label>{{x.title}}</ion-label>
+
+                    </ion-row>
+                    <ion-row text-wrap style="direction: rtl;color: white;">
+                        <ion-label>{{"StoreName" | translate}}</ion-label>
+                        <ion-label>{{x.store}}</ion-label>
+
+                    </ion-row>
+                    <ion-row text-wrap style="direction: rtl;color: white;">
+                        <ion-label>{{"PurchaseDate" | translate}}</ion-label>
+                        <ion-label>{{x.created_at}}</ion-label>
+
+                    </ion-row>
+                    <ion-row text-wrap style="direction: rtl;color: white;">
+                        <ion-label>{{"ExpirationDate" | translate}}</ion-label>
+                        <ion-label>{{x.expiration}}</ion-label>
+
+                    </ion-row>
+                    <ion-row text-wrap style="direction: rtl;color: white;">
+                        <ion-label>{{"City" | translate}}</ion-label>
+                        <ion-label>{{x.city}}</ion-label>
+
+                    </ion-row>
+
+                    <ion-row text-wrap style="direction: rtl;color: white;">
+                        <ion-label>{{"QrMsg" | translate}}</ion-label>
+                        <ion-label>{{x.qrmassage}}</ion-label>
+
+                    </ion-row>
+
+                </ion-col>
+            </ion-row>
+        </ion-card-header>
+    </ion-card>
+</ion-content>

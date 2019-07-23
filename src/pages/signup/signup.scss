@@ -1,0 +1,53 @@
+page-signup {
+
+    .splash-info {
+        position: relative;
+        z-index: 2;
+        margin-top: 10vh;
+        text-align: center;
+      }
+      .splash-logo {
+        margin: auto;
+        background: url('../assets/newlogo.png') no-repeat transparent;
+        background-size: 100%;
+        width: 128px;
+        height: 128px;
+      }
+      .splash-intro {
+        font-size: 18px;
+        font-weight: bold;
+        max-width: 80%;
+        margin: auto;
+        padding-top: 19px;
+      }
+
+             
+    form ion-icon {
+        position: absolute;
+        left: 10vw;
+        cursor: pointer;
+        padding-top: 10px;
+        z-index: 999;
+        margin-top: -42px;
+        font-size: 14px;
+        
+    }
+    .text-input {
+       text-align: right !important;
+    }
+    .select .select-icon{
+        position: unset;
+      }
+      .select-text {
+          text-align: right
+      }
+
+       
+    .item-input ion-label {
+      font-size: 1.5rem !important;
+      color: white !important;
+      text-align: right !important;
+    }
+
+
+}

@@ -1,0 +1,180 @@
+<ion-content scroll="false">
+
+    <div class="splash-info">
+        <div class="splash-logo"></div>
+        <div class="splash-intro">
+
+            {{"Register" | translate}}
+        </div>
+    </div>
+    <div padding>
+
+        <form (ngSubmit)="login()">
+            <ion-list>
+
+
+                <ion-item>
+
+                    <ion-label stacked>{{"Name" | translate}}</ion-label>
+                    <ion-input type="text" color="dark" [(ngModel)]="userData.name" name="name"></ion-input>
+
+                </ion-item>
+                <!--ion-item>
+              <ion-input type="email" color="dark"  [(ngModel)]="userData.email" name="email" placeholder=" البريد الالكتروني" ></ion-input>  
+          </ion-item-->
+
+
+
+                <ion-item *ngIf="!btncode">
+
+                    <ion-label stacked>{{"Phone" | translate}}</ion-label>
+                    <ion-input type="tel" color="dark" [(ngModel)]="userData.phone" name="phone" placeholder="مثال 0096650505050"></ion-input>
+
+
+                </ion-item>
+                <ion-item *ngIf="btncode">
+
+                    <ion-label stacked>{{"ActiveCode" | translate}}</ion-label>
+                    <ion-input type="number" color="dark" [(ngModel)]="userData.code" name="code"></ion-input>
+                </ion-item>
+
+
+
+                <ion-item *ngIf="!btncode">
+                    <p ion-button block style="color:white" (click)="sendcode()">
+                        {{"SendCode" | translate}}
+                    </p>
+
+                </ion-item>
+                <ion-item *ngIf="btncode">
+                    <p ion-button block style="color:white" (click)="login()">
+                        {{"LogIn" | translate}}
+                    </p>
+                </ion-item>
+
+                <!--ion-item>
+              
+              <ion-input type="{{type}}"  color="dark"  [(ngModel)]="userData.password" name="password" placeholder="كلمة السر" ></ion-input>
+            </ion-item>
+  
+            <ion-icon  name="ios-eye-off-outline" *ngIf="!showPass" (click)="showPassword()"></ion-icon>
+            <ion-icon *ngIf="showPass" name="ios-eye-outline" (click)="showPassword()"></ion-icon>
+           
+  
+                      
+          <ion-item>
+
+
+                <ion-label stacked text-right>نوع الحساب</ion-label>
+        
+                <ion-select interface="popover"  [(ngModel)]="userData.type" okText="موفق" cancelText="الغاء" name="type">
+                    <ion-option value="0"  (ionSelect)="changg($event, 0)">حساب عادى</ion-option>
+                    <ion-option value="1"  (ionSelect)="changg($event, 1)">حساب تاجر</ion-option>
+                </ion-select>
+            </ion-item>
+  
+            
+
+   <div *ngIf="s">
+    
+            <ion-item>
+
+                <ion-input type="tel" color="dark"  [(ngModel)]="userData.phone" name="phone" placeholder="الهاتف"></ion-input>
+              
+                
+            </ion-item>
+  
+  
+          
+          <ion-item>
+
+
+                <ion-label stacked text-right>الدوله</ion-label>
+        
+              <ion-select interface="popover"  [(ngModel)]="userData.country_id" okText="موفق" cancelText="الغاء" name="country_id" >
+                  <ion-option *ngFor="let x of data" value="{{x.id}}">{{x.country_name}}</ion-option>
+              </ion-select>
+          </ion-item>
+
+
+          <ion-item>
+
+              <ion-input type="text" color="dark"  [(ngModel)]="userData.name_t" name="name_t" placeholder="الاسم التجارى" ></ion-input>
+            
+              
+          </ion-item>
+
+          
+          <ion-item>
+
+              <ion-input type="text" color="dark"  [(ngModel)]="userData.commercial_register" name="commercial_register" placeholder="السجل التجارى" ></ion-input>
+            
+              
+          </ion-item>
+          <ion-item>
+
+              <ion-input type="text" color="dark"  [(ngModel)]="userData.activity" name="activity" placeholder="النشاط" ></ion-input>
+            
+              
+          </ion-item>
+
+
+
+
+          <ion-item>
+
+              <ion-input type="text" color="dark"  [(ngModel)]="userData.city" name="city" placeholder="المدينه"></ion-input>
+            
+              
+          </ion-item>
+
+
+
+
+          <ion-item>
+
+              <ion-input type="text" color="dark"  [(ngModel)]="userData.street" name="street" placeholder="الشارع"></ion-input>
+            
+              
+          </ion-item>
+
+
+
+          <ion-item>
+
+              <ion-input type="text" color="dark"  [(ngModel)]="userData.postbox" name="postbox" placeholder="ص .ب"></ion-input>
+            
+              
+          </ion-item>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+            <ion-item>
+                <button ion-button block  type="submit" >
+                  تسجيل
+                </button>
+            </ion-item-->
+
+
+
+            </ion-list>
+        </form>
+
+
+    </div>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+
+        <ion-title text-right>
+            <img src="assets/logo.png" style="height: 42px;" alt="">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+    <div text-right [innerHTML]="data">
+
+    </div>
+
+    <button ion-button block (click)="ok()">{{"ok" | translate}}</button>
+</ion-content>

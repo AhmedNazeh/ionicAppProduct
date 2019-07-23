@@ -1,0 +1,61 @@
+<ion-content scroll="false">
+
+    <div class="splash-info">
+        <div class="splash-logo"></div>
+        <div class="splash-intro">
+
+            {{"LogIn" | translate}}
+        </div>
+    </div>
+    <div padding>
+
+
+        <form (ngSubmit)="login()">
+            <ion-list>
+
+
+                <ion-item *ngIf="!btncode">
+
+                    <ion-label stacked>{{"Phone" | translate}}</ion-label>
+                    <ion-input type="tel" color="dark" [(ngModel)]="userData.phone" name="phone" placeholder="مثال 0096650505050"></ion-input>
+                </ion-item>
+                <ion-item *ngIf="btncode">
+
+                    <ion-label stacked>{{"ActiveCode" | translate}}</ion-label>
+                    <ion-input type="number" color="dark" [(ngModel)]="userData.code" name="code"></ion-input>
+                </ion-item>
+
+
+
+                <ion-item *ngIf="!btncode">
+                    <p ion-button block style="color:white" (click)="sendcode()">
+                        {{"ActiveCode" | translate}}
+                    </p>
+                    <!-- <p class="ion-float-right" ion-button style="color:white" (click)="openUsage()" style="color:white;float: right;margin-top: 20px;background-color: #906311;width: 150px;">
+                        شروط الاستخدام
+                    </p> -->
+                </ion-item>
+                <ion-item *ngIf="btncode">
+                    <p ion-button block style="color:white" (click)="login()">
+                        {{"LogIn" | translate}}
+                    </p>
+                </ion-item>
+
+                <!--ion-item>
+            <p ion-button block style="color:white" (click)="in()" >
+              تسجيل
+            </p>
+        </ion-item-->
+
+
+
+            </ion-list>
+        </form>
+
+        <!--button ion-button (click)="rest()" style="color:white;background-color: transparent;" block>
+          استرجاع كلمه المرور
+        </button-->
+
+
+    </div>
+</ion-content>
