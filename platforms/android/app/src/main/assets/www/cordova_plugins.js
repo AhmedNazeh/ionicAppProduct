@@ -1,54 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
-      "id": "cordova-plugin-statusbar.statusbar",
-      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-      "pluginId": "cordova-plugin-statusbar",
-      "clobbers": [
-        "window.StatusBar"
-      ]
-    },
-    {
-      "id": "cordova-plugin-device.device",
-      "file": "plugins/cordova-plugin-device/www/device.js",
-      "pluginId": "cordova-plugin-device",
-      "clobbers": [
-        "device"
-      ]
-    },
-    {
-      "id": "cordova-plugin-splashscreen.SplashScreen",
-      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-      "pluginId": "cordova-plugin-splashscreen",
-      "clobbers": [
-        "navigator.splashscreen"
-      ]
-    },
-    {
-      "id": "cordova-plugin-ionic-webview.IonicWebView",
-      "file": "plugins/cordova-plugin-ionic-webview/src/www/util.js",
-      "pluginId": "cordova-plugin-ionic-webview",
-      "clobbers": [
-        "Ionic.WebView"
-      ]
-    },
-    {
-      "id": "cordova-plugin-ionic-keyboard.keyboard",
-      "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
-      "pluginId": "cordova-plugin-ionic-keyboard",
-      "clobbers": [
-        "window.Keyboard"
-      ]
-    },
-    {
-      "id": "cordova-plugin-qrscanner.QRScanner",
-      "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
-      "pluginId": "cordova-plugin-qrscanner",
-      "clobbers": [
-        "QRScanner"
-      ]
-    },
-    {
       "id": "cordova-plugin-dialogs.notification",
       "file": "plugins/cordova-plugin-dialogs/www/notification.js",
       "pluginId": "cordova-plugin-dialogs",
@@ -128,6 +80,62 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "runs": true
     },
     {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-fcm-with-dependecy-updated.FCMPlugin",
+      "file": "plugins/cordova-plugin-fcm-with-dependecy-updated/www/FCMPlugin.js",
+      "pluginId": "cordova-plugin-fcm-with-dependecy-updated",
+      "clobbers": [
+        "FCMPlugin"
+      ]
+    },
+    {
+      "id": "cordova-plugin-ionic-keyboard.keyboard",
+      "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
+      "pluginId": "cordova-plugin-ionic-keyboard",
+      "clobbers": [
+        "window.Keyboard"
+      ]
+    },
+    {
+      "id": "cordova-plugin-ionic-webview.IonicWebView",
+      "file": "plugins/cordova-plugin-ionic-webview/src/www/util.js",
+      "pluginId": "cordova-plugin-ionic-webview",
+      "clobbers": [
+        "Ionic.WebView"
+      ]
+    },
+    {
+      "id": "cordova-plugin-qrscanner.QRScanner",
+      "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
+      "pluginId": "cordova-plugin-qrscanner",
+      "clobbers": [
+        "QRScanner"
+      ]
+    },
+    {
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
+      "clobbers": [
+        "navigator.splashscreen"
+      ]
+    },
+    {
+      "id": "cordova-plugin-statusbar.statusbar",
+      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+      "pluginId": "cordova-plugin-statusbar",
+      "clobbers": [
+        "window.StatusBar"
+      ]
+    },
+    {
       "id": "es6-promise-plugin.Promise",
       "file": "plugins/es6-promise-plugin/www/promise.js",
       "pluginId": "es6-promise-plugin",
@@ -140,32 +148,24 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "window.plugins.socialsharing"
       ]
-    },
-    {
-      "id": "cordova-plugin-fcm-with-dependecy-updated.FCMPlugin",
-      "file": "plugins/cordova-plugin-fcm-with-dependecy-updated/www/FCMPlugin.js",
-      "pluginId": "cordova-plugin-fcm-with-dependecy-updated",
-      "clobbers": [
-        "FCMPlugin"
-      ]
     }
   ];
   module.exports.metadata = {
-    "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-statusbar": "2.4.2",
-    "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-splashscreen": "5.0.2",
-    "cordova-plugin-ionic-webview": "2.4.1",
-    "cordova-plugin-ionic-keyboard": "2.1.3",
-    "cordova-plugin-vibration": "3.1.0",
-    "cordova-plugin-qrscanner": "2.6.2",
     "cordova-plugin-dialogs": "2.0.1",
     "cordova-plugin-globalization": "1.11.0",
     "cordova-plugin-inappbrowser": "3.0.0",
     "cordova-plugin-nativestorage": "2.3.2",
     "cordova-plugin-apprate": "1.4.0",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-fcm-with-dependecy-updated": "2.4.0",
+    "cordova-plugin-ionic-keyboard": "2.1.3",
+    "cordova-plugin-ionic-webview": "2.4.1",
+    "cordova-plugin-qrscanner": "2.6.2",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-vibration": "3.1.0",
+    "cordova-plugin-whitelist": "1.3.3",
     "es6-promise-plugin": "4.2.2",
-    "cordova-plugin-x-socialsharing": "5.4.4",
-    "cordova-plugin-fcm-with-dependecy-updated": "2.4.0"
+    "cordova-plugin-x-socialsharing": "5.4.4"
   };
 });

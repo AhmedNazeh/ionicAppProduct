@@ -12,7 +12,7 @@ import { Vibration } from '@ionic-native/vibration';
 export class HomePage {
 
   showing:boolean=false;
-  bay:boolean=false;
+  bay:boolean=false; 
   all: any;
   data: any;
   upurl: string;
@@ -142,9 +142,12 @@ export class HomePage {
   }
  
   maked(){
-    
+  
+
+    this.data = null;
     this.x=true;
     this.showing=false;
+    this.bay=false;
     this.open();
     
   }
@@ -153,14 +156,14 @@ export class HomePage {
 
 
   GetAds(){
-    this.functionsProvider.loadingfun();
+    // this.functionsProvider.loadingfun();
     this.authServiceProvider.getData('startads')
     .then(data => {
         this.allads=data;
         this.ads = this.allads.data;  
         
       
-      this.functionsProvider.loading.dismiss();
+      // this.functionsProvider.loading.dismiss();
     });
   }
 

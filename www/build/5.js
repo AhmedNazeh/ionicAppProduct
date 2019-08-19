@@ -91,7 +91,7 @@ var AgreementPage = /** @class */ (function () {
     };
     AgreementPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-agreement',template:/*ion-inline-start:"D:\My Project\Ionic Apps\myApp0\src\pages\agreement\agreement.html"*/'<ion-header>\n    <ion-navbar>\n\n        <ion-title text-right>\n            <img src="assets/logo.png" style="height: 42px;" alt="">\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n\n\n<ion-content padding>\n    <div text-right [innerHTML]="data">\n\n    </div>\n\n    <button ion-button block (click)="ok()">{{"ok" | translate}}</button>\n</ion-content>'/*ion-inline-end:"D:\My Project\Ionic Apps\myApp0\src\pages\agreement\agreement.html"*/,
+            selector: 'page-agreement',template:/*ion-inline-start:"E:\Ionic Apps\ionicProducts\ionicAppProduct\src\pages\agreement\agreement.html"*/'<ion-header>\n\n    <ion-navbar>\n\n\n\n        <ion-title text-right>\n\n            <img src="assets/logo.png" style="height: 42px;" alt="">\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content padding>\n\n    <div text-right [innerHTML]="data">\n\n\n\n    </div>\n\n\n\n    <button ion-button block (click)="ok()">{{"ok" | translate}}</button>\n\n</ion-content>'/*ion-inline-end:"E:\Ionic Apps\ionicProducts\ionicAppProduct\src\pages\agreement\agreement.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
